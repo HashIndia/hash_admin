@@ -14,7 +14,7 @@ import {
 import { adminProductsAPI, uploadAPI } from '../services/api';
 import FileUpload from './FileUpload';
 import toast from 'react-hot-toast';
-import useProductStore from '../../../frontend/src/stores/useProductStore';
+// import useProductStore from '../../../frontend/src/stores/useProductStore';
 
 const AddProductModal = ({ isOpen, onClose, onProductAdded, editProduct = null }) => {
   const [loading, setLoading] = useState(false);
@@ -319,7 +319,7 @@ const AddProductModal = ({ isOpen, onClose, onProductAdded, editProduct = null }
 
       // Refresh products in the frontend store
       try {
-        useProductStore.getState().loadProducts();
+        // useProductStore.getState().loadProducts();
       } catch (storeError) {
         console.warn('Failed to refresh product store:', storeError);
         // Continue with normal flow even if store refresh fails
